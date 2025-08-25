@@ -30,7 +30,7 @@ export async function sendEmailToAdmin(businessPhoneNumberId, user, messageId, t
   try {
     const info = await transporter.sendMail({
       from: '"ARDA SEEDS Chatbot" <your@gmail.com>',
-      to: 'tinotenda.kamunda@arda.co.zw', // change to your admin email
+      to: 'customer.experience@arda.co.zw', // change to your admin email
       subject: 'New Request from WhatsApp Chatbot',
       text: `Name: ${userState.userName}\n📞 Phone: ${user}\n\n✉️ Message:\n${userState.message}`
     });
@@ -43,3 +43,4 @@ export async function sendEmailToAdmin(businessPhoneNumberId, user, messageId, t
     throw error;
   }
 }
+
